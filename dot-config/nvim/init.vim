@@ -175,3 +175,26 @@ set incsearch
 
 " jump to one to the other using %, various character can be added.
 set matchpairs+=<:>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim Plugin Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" load plugins when starting up
+set loadplugins
+call plug#begin("~/.config/nvim/plugged")
+    " auto pairs for ( { [ ' " `
+    Plug 'jiangmiao/auto-pairs'
+    " replacement of set ruler
+    Plug 'vim-airline/vim-airline'
+    " tree style file manager
+    Plug 'preservim/nerdtree'
+    " multiple vim cursors using CTRL + N
+    Plug 'terryma/vim-multiple-cursors'
+
+    Plug 'ap/vim-css-color' " CSS Color Preview
+    "Plug 'neoclide/coc.nvim'  " Auto Completion
+    Plug 'preservim/tagbar' " Tagbar for code navigation
+
+    Plug 'wakatime/vim-wakatime' " wakatime
+call plug#end()

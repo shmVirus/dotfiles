@@ -182,6 +182,13 @@ set matchpairs+=<:>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " load plugins when starting up
 set loadplugins
+filetype off                  " required
+" C++ boilerplate template
+augroup Templates
+    autocmd!
+    autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/practice.cpp
+    autocmd BufNewFile contest.cpp 0r ~/.config/nvim/templates/contest.cpp
+augroup END
 call plug#begin("~/.config/nvim/plugged")
     " auto pairs for ( { [ ' " `
     Plug 'jiangmiao/auto-pairs'
